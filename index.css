@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img{
+    max-width: 150px;
+}
+header .navbar a:hover{
+    color: #000;
+    background: #fff;
+  }
+  
+  
+  header .btn{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+  }
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #324a79;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.info{
+    position: relative;
+    text-align: center;
+    color: #fff;
+    top: 80px;
+}
+
+.content{
+    height: 120vh;
+    width: 100%;
+    margin-top: -275px;
+    background-image: url(images/slider1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 5s;
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.content h1 {
+    animation-name: move-heading;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+  
+  .content p {
+    animation-name: move-paragraph;
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+  
+.content h1, p{
+    color: #fff;
+    margin-top: 0 50px;
+
+}
+
+
+
+@keyframes animate{
+    0%{
+        background-image: url(images/slider1.jpg);
+    }
+
+    20%{
+        background-image: url(images/slider2.jpg);
+    }
+
+    40%{
+        background-image: url(images/slider3.jpg);
+    }
+
+    60%{
+        background-image: url(images/slider4.jpg);
+    }
+
+    80%{
+        background-image: url(images/slider5.jpg);
+    }
+
+    100%{
+        background-image: url(images/slider6.jpg);
+    }
+}
+
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #324a79;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: #324a79;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: #0c111d;
+}
+
+.slider-container {
+    display: flex;
+}
+  
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+footer{
+    padding: 40px 0;
+    background: #324a79;
+}
+
+footer .social{
+    text-align: center;
+    padding: 25px;
+    color: #0c111d;
+}
+
+footer .social a{
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75; 
+    border: none;
+}
+
+.fab.fa-instagram {
+    transition: color 0.2s;
+}
+
+.fab.fa-instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}    
+
+.fab.fa-facebook {
+    transition: color 0.2s; 
+}
+
+.fab.fa-facebook:hover {
+    color: 	#4267B2; 
+}
+
+.fab.fa-pinterest{
+    transition: color 0.2s;
+}
+
+.fab.fa-pinterest:hover{
+    color: red;
+}
+
+.fab.fa-youtube{
+    transition: 0.2s;
+}
+
+.fab.fa-youtube:hover{
+    color: red;
+}
+
+.fab.fa-linkedin-in{
+    transition: color 0.2s;
+}
+
+.fab.fa-linkedin-in:hover{
+    color: #fff;
+}
+
+.fas.fa-envelope{
+    transition: 0.2s;
+}
+
+.fas.fa-envelope:hover{
+    color: #fff;
+}
+
+footer ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+footer ul li a{
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+
+footer ul li a:hover{
+    color: #fff;
+}
+
+footer .social i{
+    text-decoration: none;
+}
+
+footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+footer ul li a:hover{
+    opacity: 1;
+}
+
+footer .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}
